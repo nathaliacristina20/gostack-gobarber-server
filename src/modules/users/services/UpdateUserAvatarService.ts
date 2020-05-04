@@ -4,11 +4,11 @@ import path from 'path';
 
 import fs from 'fs';
 
-import uploadConfig from '../config/upload';
+import uploadConfig from '../../../config/upload';
 
-import User from '../models/User';
+import User from '../entities/User';
 
-import AppError from '../errors/AppError';
+import AppError from '../../../shared/errors/AppError';
 
 interface Request {
     user_id: string;
