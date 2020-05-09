@@ -1,10 +1,17 @@
 import nodemailer, { Transporter } from 'nodemailer';
+import { injectable, inject } from 'tsyringe';
+import IMailTemplateProvider from '@shared/container/providers/MailTemplateProvider/models/IMailTemplateProvider';
 import IMailProvider from '../models/IMailProvider';
+import ISendMailProvider from '../dtos/ISendMailDTO';
 
-export default class EtheralMailProvider implements IMailProvider {
+@injectable()
+export default class EtherealMailProvider implements IMailProvider {
     private client: Transporter;
 
-    constructor() {
+    constructor(
+        @inject('MailTemplateProvider')
+        private mailTemplateProvider: IMailTemplateProvider,
+    ) {
         nodemailer.createTestAccount().then(account => {
             const transporter = nodemailer.createTransport({
                 host: account.smtp.host,
@@ -20,13 +27,23 @@ export default class EtheralMailProvider implements IMailProvider {
         });
     }
 
-    public async sendMail(to: string, body: string): Promise<void> {
+    public async sendMail({
+        to,
+        from,
+        subject,
+        templateData,
+    }: ISendMailProvider): Promise<void> {
         const message = await this.client.sendMail({
-            from: 'Equipe GoBarber <equipe@gobarber.com.br>',
-            to,
-            subject: 'Recuperacao de senha',
-            text: body,
-            html: body,
+            from: {
+                name: from?.name || 'Equipe GoBarber',
+                address: from?.email || 'equipe@gobarber.com.br',
+            },
+            to: {
+                name: to.name,
+                address: to.email,
+            },
+            subject,
+            html: await this.mailTemplateProvider.parse(templateData),
         });
         console.log('Message send: %s', message.messageId);
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(message));
