@@ -1,22 +1,23 @@
 import { injectable, inject } from 'tsyringe';
-import { getDaysInMonth, getDate } from 'date-fns';
+import { getHours } from 'date-fns';
 
 // import AppError from '@shared/errors/AppError';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 interface IRequest {
     provider_id: string;
+    day: number;
     month: number;
     year: number;
 }
 
 type IResponse = Array<{
-    day: number;
+    hour: number;
     available: boolean;
 }>;
 
 @injectable()
-class ListProviderMonthAvailabilityService {
+class ListProviderDayAvailabilityService {
     constructor(
         @inject('AppointmentsRepository')
         private appointmentsRepository: IAppointmentsRepository,
@@ -24,39 +25,40 @@ class ListProviderMonthAvailabilityService {
 
     public async execute({
         provider_id,
+        day,
         month,
         year,
     }: IRequest): Promise<IResponse> {
-        const appointments = await this.appointmentsRepository.findAllInMonthFromProvider(
+        const appointments = await this.appointmentsRepository.findAllInDayFromProvider(
             {
                 provider_id,
+                day,
                 year,
                 month,
             },
         );
 
-        const numberOfDaysInMonth = getDaysInMonth(new Date(year, month - 1));
+        const hourStart = 8;
 
-        const eachDayArray = Array.from(
+        const eachHourArray = Array.from(
             {
-                length: numberOfDaysInMonth,
+                length: 10,
             },
-            (value, index) => index + 1,
+            (_, index) => index + hourStart,
         );
 
-        const avaibility = eachDayArray.map(day => {
-            const appointmentsInDay = appointments.filter(appointment => {
-                return getDate(appointment.date) === day;
-            });
-
+        const availability = eachHourArray.map(hour => {
+            const hasAppointmentInHour = appointments.find(
+                appointment => getHours(appointment.date) === hour,
+            );
             return {
-                day,
-                available: appointmentsInDay.length < 10,
+                hour,
+                available: !hasAppointmentInHour,
             };
         });
 
-        return avaibility;
+        return availability;
     }
 }
 
-export default ListProviderMonthAvailabilityService;
+export default ListProviderDayAvailabilityService;
