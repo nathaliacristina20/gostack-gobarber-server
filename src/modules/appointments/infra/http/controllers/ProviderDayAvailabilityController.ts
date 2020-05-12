@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import { container } from 'tsyringe';
 
-import ListProviderDayAvailability from '@modules/appointments/services/ListProviderDayAvailability';
+import ListProviderDayAvailabilityService from '@modules/appointments/services/ListProviderDayAvailabilityService';
 
 class ProviderDayAvailabilityController {
     public async index(
@@ -13,7 +13,7 @@ class ProviderDayAvailabilityController {
         const { day, month, year } = request.body;
 
         const listProviderDayAvailability = container.resolve(
-            ListProviderDayAvailability,
+            ListProviderDayAvailabilityService,
         );
         const availability = await listProviderDayAvailability.execute({
             provider_id,

@@ -1,15 +1,15 @@
 // import AppError from '@shared/errors/AppError';
 
 import FakeAppointmentsRepository from '@modules/appointments/repositories/fakes/FakeAppointmentsRepository';
-import ListProviderDayAvailability from './ListProviderDayAvailability';
+import ListProviderDayAvailabilityService from './ListProviderDayAvailabilityService';
 
-let listProviderDayAvailability: ListProviderDayAvailability;
+let listProviderDayAvailability: ListProviderDayAvailabilityService;
 let fakeAppointmentsRepository: FakeAppointmentsRepository;
 
 describe('ListProviderDayAvailability', () => {
     beforeEach(() => {
         fakeAppointmentsRepository = new FakeAppointmentsRepository();
-        listProviderDayAvailability = new ListProviderDayAvailability(
+        listProviderDayAvailability = new ListProviderDayAvailabilityService(
             fakeAppointmentsRepository,
         );
     });
