@@ -28,32 +28,26 @@ e para barbeiros, permite gerenciar os horários marcados.</p>
   <li>Para a versão mobile, <a href="https://github.com/nathaliacristina20/gostack-gobarber-mobile">aqui</a>.</li>
 </ul>
 
-
 ## :computer: Tecnologias
 
 Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores práticas de desenvolvimento! 
-<p>:heart_eyes: TDD :sparkling_heart: Design patterns: SOLID, DDD e DRY
-
+<p>:heart_eyes: TDD :sparkling_heart: Design patterns: SOLID, DDD e DRY, :balance_scale: estratégia de cache e :police_car: segurança no node.</p>
+    
 - Node
 - Express
 - Typescript
-- ESLint-Airbnb
-- Prettier
+- ESLint-Airbnb, Prettier e editorConfig
 - Celebrate
 - Jest 
 - Multer
-- Date FNS
+- Datefns
 - dotenv
 - Bcryptjs
 - jsonwebtoken
 - TypeORM
-- Cors
 - Handlebars
 - Nodemailer
-- Redis
-- Uuidv4
-- Tsyringe
-- Class-transformer
+- Redis, Ioredis
 
 ## :books: Guia de instalação e execução
 
@@ -63,9 +57,12 @@ Para rodar esta aplicação você precisará de [Git](https://git-scm.com/), [No
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en/) v10.20 ou maior
-- [PostgreSQL](https://www.postgresql.org/) 
 - [Yarn](https://yarnpkg.com/)
-- [Mongodb](https://www.mongodb.com/) v3.5.7 ou maior
+- [PostgreSQL](https://www.postgresql.org/) **
+- [Mongodb](https://www.mongodb.com/) **
+- [Redis](https://redis.io/) **
+
+** Ou [Docker](https://www.docker.com/) 
 
 ### Como executar
 :construction: Em construção!
