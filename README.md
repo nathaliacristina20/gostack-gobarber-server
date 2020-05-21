@@ -31,7 +31,7 @@ e para barbeiros, permite gerenciar os horários marcados.</p>
 ## :computer: Tecnologias
 
 Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores práticas de desenvolvimento! 
-<p>:heart_eyes: TDD :sparkling_heart: Design patterns: SOLID, DDD e DRY, :balance_scale: estratégia de cache e :police_car: segurança no node.</p>
+<p>:heart_eyes: <strong>TDD</strong> :sparkling_heart: Design patterns: <strong>SOLID, DDD e DRY</strong>, :balance_scale: estratégia de <strong>cache</strong> e :police_car: <strong>segurança</strong> no node.</p>
     
 - Node
 - Express
@@ -61,7 +61,22 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 ** Ou [Docker](https://www.docker.com/) 
 
 ### Como executar
-:construction: Em construção!
+
+<i>Antes de executar estes passos, você precisa ter uma instâncias dos bancos listados acima ou um Docker com as imagens.</i>
+
+- Clone o repositório ```git clone https://github.com/nathaliacristina20/gostack-gobarber-server.git```
+- Vá até o diretório ```cd gostack-gobarber-server```
+- Execute ```yarn``` para instalar as dependências
+- Copie o arquivo .env.example executando ```cp .env.example .env``` para linux ou mac e ```copy .env.example .env``` para windows
+- Abra o arquivo .env e preencha com suas variáveis de ambiente
+- Execute ```yarn typeorm migration:run``` para rodar as migrations 
+- Execute ```yarn dev:server``` para rodar o servidor
+
+Você pode realizar requisições HTTP através do Insomnia:
+
+{...}
+
+Caso deseje executar os testes unitários e de integração, basta executar ```yarn test``` em seu terminal.
 
 ## :pencil: Como contribuir
 
