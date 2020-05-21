@@ -1,7 +1,9 @@
+<p align="center">
+    <img width="300" align="center" src=".github/gostack.svg">   
+</p>
 
 <h1 align="center">
- <img src=".github/gostack.svg">
- GoBarber API
+    GoBarber API
 </h1>
 
 <h3 align="center">
@@ -68,13 +70,15 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 
 ### Como executar
 
-<i>Antes de executar estes passos, você precisa ter uma instância dos bancos listados acima ou um Docker com as imagens.</i>
+<i>Antes de executar estes passos, você precisa ter uma instância dos bancos listados acima ou um Docker com as imagens e os databases e schemas criados.</i>
 
 - Clone o repositório ```git clone https://github.com/nathaliacristina20/gostack-gobarber-server.git```
 - Vá até o diretório ```cd gostack-gobarber-server```
 - Execute ```yarn``` para instalar as dependências
 - Copie o arquivo .env.example executando ```cp .env.example .env``` para linux ou mac e ```copy .env.example .env``` para windows
 - Abra o arquivo .env e preencha com suas variáveis de ambiente
+- Copie o arquivo de configuração do orm executando ```cp ormconfig.example.json ormconfig.json``` para linux ou mac e ```copy ormconfig.example.json ormconfig.json``` para windows
+- Abra o arquivo ormconfig.json e preencha com suas credenciais das instâncias dos bancos de dados
 - Execute ```yarn typeorm migration:run``` para rodar as migrations 
 - Execute ```yarn dev:server``` para rodar o servidor
 
