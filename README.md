@@ -76,7 +76,7 @@ Você pode realizar requisições HTTP através do Insomnia:
 
 {...}
 
-Caso deseje executar os testes unitários e de integração, basta executar ```yarn test``` em seu terminal.
+Caso deseje executar os testes unitários e de integração basta executar ```yarn test``` em seu terminal. Você poderá ver um relatório da cobertura pelo endereço http://localhost:3333/coverage/lcov-report/index.html
 
 ## :pencil: Como contribuir
 
