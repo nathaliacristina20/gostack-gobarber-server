@@ -82,6 +82,7 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 - Execute ```yarn``` para instalar as dependências
 - Copie o arquivo .env.example executando ```cp .env.example .env``` para linux ou mac e ```copy .env.example .env``` para windows
 - Abra o arquivo .env e preencha com suas variáveis de ambiente
+- Copie o arquivo de configuração do orm executando ```cp ormconfig.example.json ormconfig.json``` para linux ou mac e ```copy ormconfig.example.json ormconfig.json``` para windows
 - Execute ```yarn typeorm migration:run``` para rodar as migrations 
 - Execute ```yarn dev:server``` para rodar o servidor
 
