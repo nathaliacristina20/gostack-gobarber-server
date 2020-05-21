@@ -70,7 +70,7 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 
 ### Como executar
 
-<i>Antes de executar estes passos, você precisa ter uma instância dos bancos listados acima ou um Docker com as imagens.</i>
+<i>Antes de executar estes passos, você precisa ter uma instância dos bancos listados acima ou um Docker com as imagens e os databases e schemas criados.</i>
 
 - Clone o repositório ```git clone https://github.com/nathaliacristina20/gostack-gobarber-server.git```
 - Vá até o diretório ```cd gostack-gobarber-server```
