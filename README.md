@@ -53,14 +53,10 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 
 ### Pré-requisitos
 
-Para rodar esta aplicação você precisará de [Git](https://git-scm.com/), [Node.js v10.20](https://nodejs.org/en/) ou maior, [PostgreSQL](https://www.postgresql.org/) e [Yarn](https://yarnpkg.com/).
-
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en/) v10.20 ou maior
 - [Yarn](https://yarnpkg.com/)
-- [PostgreSQL](https://www.postgresql.org/) **
-- [Mongodb](https://www.mongodb.com/) **
-- [Redis](https://redis.io/) **
+- Uma instância de [PostgreSQL](https://www.postgresql.org/), [Mongodb](https://www.mongodb.com/) e [Redis](https://redis.io/) **
 
 ** Ou [Docker](https://www.docker.com/) 
 
