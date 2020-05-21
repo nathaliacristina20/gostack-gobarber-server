@@ -1,7 +1,9 @@
+<p align="center">
+    <img width="300" align="center" src=".github/gostack.svg">   
+</p>
 
 <h1 align="center">
- <img src=".github/gostack.svg">
- GoBarber API
+    GoBarber API
 </h1>
 
 <h3 align="center">
