@@ -24,8 +24,8 @@ e para barbeiros, permite gerenciar os horários marcados.</p>
 
 <p>Este é o repositório da API do projeto.</p>
 <ul>
-  <li>Para a versão web, clique aqui.</li>
-  <li>Para a versão mobile, aqui.</li>
+  <li>Para a versão web, <a href="https://github.com/nathaliacristina20/gostack-gobarber-web">clique aqui</a>.</li>
+  <li>Para a versão mobile, <a href="https://github.com/nathaliacristina20/gostack-gobarber-mobile">aqui</a>.</li>
 </ul>
 
 
