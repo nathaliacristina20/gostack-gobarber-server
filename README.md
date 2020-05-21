@@ -58,7 +58,14 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 ## :books: Guia de instalação e execução
 
 ### Pré-requisitos
-:construction: Em construção!
+
+Para rodar esta aplicação você precisará de [Git](https://git-scm.com/), [Node.js v10.20](https://nodejs.org/en/) ou maior, [PostgreSQL](https://www.postgresql.org/) e [Yarn](https://yarnpkg.com/).
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/) v10.20 ou maior
+- [PostgreSQL](https://www.postgresql.org/) 
+- [Yarn](https://yarnpkg.com/)
+- [Mongodb](https://www.mongodb.com/) v3.5.7 ou maior
 
 ### Como executar
 :construction: Em construção!
