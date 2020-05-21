@@ -29,7 +29,7 @@ e para barbeiros, permite gerenciar os horários marcados.</p>
 ## :computer: Tecnologias
 
 Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores práticas de desenvolvimento! 
-<p>:heart_eyes: <strong>TDD</strong> :sparkling_heart: Design patterns: <strong>SOLID, DDD e DRY</strong>, :balance_scale: estratégia de <strong>cache</strong> e :police_car: <strong>segurança</strong> no node.</p>
+<p>:heart_eyes: <strong>TDD</strong> :sparkling_heart: Design patterns: <strong>SOLID</strong>, <strong>DDD</strong> e <strong>DRY</strong>, :balance_scale: estratégia de <strong>cache</strong> e :police_car: <strong>segurança</strong> no node.</p>
     
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
@@ -66,7 +66,7 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 
 ### Como executar
 
-<i>Antes de executar estes passos, você precisa ter uma instâncias dos bancos listados acima ou um Docker com as imagens.</i>
+<i>Antes de executar estes passos, você precisa ter uma instância dos bancos listados acima ou um Docker com as imagens.</i>
 
 - Clone o repositório ```git clone https://github.com/nathaliacristina20/gostack-gobarber-server.git```
 - Vá até o diretório ```cd gostack-gobarber-server```
