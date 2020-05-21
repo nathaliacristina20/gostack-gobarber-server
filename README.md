@@ -1,6 +1,6 @@
-<h2 align="center">
-    <img align="center" src=".github/gostack.svg">
-</h2>
+<p align="center">
+    <img align="center" src=".github/gostack.svg">   
+</p>
 
 <h1 align="center">
     GoBarber API
