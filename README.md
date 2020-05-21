@@ -70,7 +70,7 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 - Execute ```yarn typeorm migration:run``` para rodar as migrations 
 - Execute ```yarn dev:server``` para rodar o servidor
 
-Você pode realizar requisições HTTP através do Insomnia
+Você pode realizar requisições REST através do Insomnia
 
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=GoBarber&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnathaliacristina20%2Fgostack-gobarber-server%2Fmaster%2Finsomnia.json)
 
