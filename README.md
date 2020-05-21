@@ -5,7 +5,7 @@
 </h1>
 
 <h3 align="center">
-Plataforma para agendamento e gerenciamento de horários para barbearias
+Plataforma de agendamento e gerenciamento para barbearias
 </h3>
 
 Aplicação para agendar e gerenciar serviços de beleza, onde prestadores de serviços podem se cadastrar, e usuários poderão marcar agendamentos com estes provedores.
