@@ -16,13 +16,8 @@ Plataforma de agendamento e gerenciamento para barbearias
 
 ## Layout
 
-<<<<<<< HEAD
-<img src=".github/gobarber_web.svg">
-<img src=".github/gobarber_mobile.svg">
-=======
 <img src=".github/gobarber_web.gif">
 <img src=".github/gobarber_mobile.gif">
->>>>>>> master
 
 ## :rocket: Sobre o projeto
 
@@ -83,6 +78,7 @@ Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores 
 - Copie o arquivo .env.example executando ```cp .env.example .env``` para linux ou mac e ```copy .env.example .env``` para windows
 - Abra o arquivo .env e preencha com suas variáveis de ambiente
 - Copie o arquivo de configuração do orm executando ```cp ormconfig.example.json ormconfig.json``` para linux ou mac e ```copy ormconfig.example.json ormconfig.json``` para windows
+- Abra o arquivo ormconfig.json e preencha com suas credenciais das instâncias dos bancos de dados
 - Execute ```yarn typeorm migration:run``` para rodar as migrations 
 - Execute ```yarn dev:server``` para rodar o servidor
 
