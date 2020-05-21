@@ -31,21 +31,27 @@ e para barbeiros, permite gerenciar os horários marcados.</p>
 Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores práticas de desenvolvimento! 
 <p>:heart_eyes: <strong>TDD</strong> :sparkling_heart: Design patterns: <strong>SOLID, DDD e DRY</strong>, :balance_scale: estratégia de <strong>cache</strong> e :police_car: <strong>segurança</strong> no node.</p>
     
-- Node
-- Express
-- Typescript
-- ESLint-Airbnb, Prettier e editorConfig
-- Celebrate
-- Jest 
-- Multer
-- Datefns
-- dotenv
-- Bcryptjs
-- jsonwebtoken
-- TypeORM
-- Handlebars
-- Nodemailer
-- Redis, Ioredis
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [Typescript](https://www.typescriptlang.org/)
+- [ESLint-Airbnb](https://eslint.org/), [Prettier](https://prettier.io/) e [EditorConfig](https://editorconfig.org/)
+- [Celebrate](https://github.com/arb/celebrate)
+- [Jest](https://jestjs.io/) 
+- [Multer](https://github.com/expressjs/multer)
+- [Datefns](https://date-fns.org/)
+- [Dotenv](https://github.com/motdotla/dotenv)
+- [Bcrypt.js](https://github.com/dcodeIO/bcrypt.js/)
+- [Jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+- [TypeORM](https://typeorm.io/#/)
+- [Handlebars](https://handlebarsjs.com/)
+- [Nodemailer](https://nodemailer.com/about/)
+- [Ioredis](https://github.com/luin/ioredis)
+- [Cors](https://github.com/expressjs/cors)
+- [Aws-sdk](https://github.com/aws/aws-sdk-js)
+- [Class-transformer](https://github.com/typestack/class-transformer)
+- [Rate-limiter-flexible](https://github.com/animir/node-rate-limiter-flexible)
+- [Tsyringe](https://github.com/microsoft/tsyringe)
+- [Uuidv4](https://github.com/thenativeweb/uuidv4)
 
 ## :books: Guia de instalação e execução
 
