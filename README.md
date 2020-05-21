@@ -14,8 +14,13 @@ Plataforma de agendamento e gerenciamento para barbearias
 
 ## Layout
 
+<<<<<<< HEAD
 <img src=".github/gobarber_web.svg">
 <img src=".github/gobarber_mobile.svg">
+=======
+<img src=".github/gobarber_web.gif">
+<img src=".github/gobarber_mobile.gif">
+>>>>>>> master
 
 ## :rocket: Sobre o projeto
 
