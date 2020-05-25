@@ -91,7 +91,7 @@ describe('ListProviderMonthAvailabilityService', () => {
             expect.arrayContaining([
                 {
                     day: 19,
-                    available: true,
+                    available: false,
                 },
                 {
                     day: 20,
@@ -99,11 +99,11 @@ describe('ListProviderMonthAvailabilityService', () => {
                 },
                 {
                     day: 21,
-                    available: true,
+                    available: false,
                 },
                 {
                     day: 22,
-                    available: true,
+                    available: false,
                 },
             ]),
         );
