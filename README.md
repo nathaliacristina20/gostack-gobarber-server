@@ -32,7 +32,7 @@ e para barbeiros, permite gerenciar os horários marcados.</p>
 ## :computer: Tecnologias
 
 Além das tecnologias abaixo, esta aplicação foi desenvolvida com as melhores práticas de desenvolvimento! 
-<p>:heart_eyes: <strong>TDD</strong> :sparkling_heart: Design patterns: <strong>SOLID</strong>, <strong>DDD</strong> e <strong>DRY</strong>, :balance_scale: estratégia de <strong>cache</strong> e :police_car: <strong>segurança</strong> no node.</p>
+<p>:heart_eyes: <strong>Arquitetura com services</strong> :balance_scale: estratégia de <strong>cache</strong> e :police_car: bibliotecas auxiliares para <strong>segurança</strong> no node.</p>
     
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
