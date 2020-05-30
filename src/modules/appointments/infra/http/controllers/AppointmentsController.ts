@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { parseISO } from 'date-fns';
 
 import { container } from 'tsyringe';
 
@@ -14,11 +13,17 @@ class AppointmentController {
         const { provider_id, date } = request.body;
 
         const createAppointment = container.resolve(CreateAppointmentService);
-        const appointment = await createAppointment.execute({
+        const { appointment, notification } = await createAppointment.execute({
             date,
             user_id,
             provider_id,
         });
+
+        const ownerSocket = request.connectedUsers[provider_id];
+
+        if (ownerSocket) {
+            request.io.to(ownerSocket).emit('notification', notification);
+        }
 
         return response.json(appointment);
     }

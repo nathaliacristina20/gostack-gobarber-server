@@ -16,6 +16,16 @@ interface IRequest {
     date: Date;
 }
 
+interface INotification {
+    recipient_id: string;
+    content: string;
+}
+
+interface IAppointmentResponse {
+    appointment: Appointment;
+    notification: INotification;
+}
+
 @injectable()
 class CreateAppointmentService {
     constructor(
@@ -33,7 +43,7 @@ class CreateAppointmentService {
         date,
         provider_id,
         user_id,
-    }: IRequest): Promise<Appointment> {
+    }: IRequest): Promise<IAppointmentResponse> {
         if (user_id === provider_id) {
             throw new AppError(
                 "You can't create an appointment with yourself.",
@@ -73,7 +83,7 @@ class CreateAppointmentService {
             "dd/MM/yyyy 'às' HH:mm'h'",
         );
 
-        await this.notificationsRepository.create({
+        const notification = await this.notificationsRepository.create({
             recipient_id: provider_id,
             content: `Novo agendamento para ${dateFormatted}`,
         });
@@ -85,7 +95,7 @@ class CreateAppointmentService {
 
         await this.cacheProvider.invalidate(cacheKey);
 
-        return appointment;
+        return { appointment, notification };
     }
 }
 
