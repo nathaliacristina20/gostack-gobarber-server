@@ -19,13 +19,7 @@ class AppointmentController {
             provider_id,
         });
 
-        const ownerSocket = request.connectedUsers[provider_id];
-
-        if (ownerSocket) {
-            request.io.to(ownerSocket).emit('notification', notification);
-        }
-
-        return response.json(appointment);
+        return response.json({ appointment, notification });
     }
 }
 

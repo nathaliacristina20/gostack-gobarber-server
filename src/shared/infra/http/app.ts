@@ -2,6 +2,7 @@ import 'reflect-metadata';
 import 'dotenv/config';
 import express, { Request, Response, NextFunction } from 'express';
 
+import mung from 'express-mung';
 import cors from 'cors';
 import { errors } from 'celebrate';
 import 'express-async-errors';
@@ -46,11 +47,8 @@ class App {
         this.io = socketIo(this.server);
 
         this.io.on('connection', socket => {
-            console.log('Socket.io connected!');
-
             const { user_id } = socket.handshake.query;
 
-            console.log('Client ', user_id, ' connected');
             this.connectedUsers[user_id] = socket.id;
 
             console.log('List of connected users ', this.connectedUsers);
@@ -66,7 +64,7 @@ class App {
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use('/files', express.static(uploadConfig.uploadsFolder));
-        // this.app.use(Notification);
+
         this.app.use(rateLimiter);
 
         this.app.use(
@@ -75,6 +73,27 @@ class App {
                 request.connectedUsers = this.connectedUsers;
                 next();
             },
+        );
+
+        this.app.use(
+            mung.json((body: any, request: Request) => {
+                if (body.notification) {
+                    const { provider_id } = request.body;
+
+                    const ownerSocket = request.connectedUsers[provider_id];
+
+                    if (ownerSocket) {
+                        request.io
+                            .to(ownerSocket)
+                            .emit('notification', body.notification);
+                    }
+                }
+
+                // eslint-disable-next-line no-param-reassign
+                delete body.notification;
+
+                return body;
+            }),
         );
     }
 
