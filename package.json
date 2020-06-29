@@ -6,7 +6,7 @@
   "author": "Nathalia Cristina <nathaliacristina20@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
     "start": "ts-node src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register  ./node_modules/typeorm/cli.js",
@@ -49,12 +49,17 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-			"eslint --fix",
-			"cross-env CI=true yarn test --bail --findRelatedTests",
-			"git add"
-		] 
+      "eslint --fix",
+      "cross-env CI=true yarn test --bail --findRelatedTests",
+      "git add"
+    ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/plugin-proposal-decorators": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-typescript": "^7.10.1",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/bcryptjs": "^2.4.2",
@@ -73,6 +78,8 @@
     "@types/socket.io": "^2.1.8",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-transform-typescript-metadata": "^0.3.0",
     "commitizen": "^4.1.2",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "3.2.0",

@@ -20,8 +20,9 @@
   },
   "exclude": [
     "node_modules",
+    "coverage",
     "./jest.config.js",
     "./prettier.config.js",
-    "./commitlint.config.js"
+    "./commitlint.config.js"    
   ]
 }
