@@ -109,7 +109,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 ## :page_with_curl: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/nathaliacristina20/be-the-hero/blob/master/LICENSE">LICENSE</a> para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/nathaliacristina20/gostack-gobarber-server/blob/master/LICENSE">LICENSE</a> para mais detalhes.
 
 <hr />
 <p>by Nathalia Cristina :wave: <a href="https://linktr.ee/nathaliacristina20">Get in touch!</a></p>
