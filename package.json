@@ -24,7 +24,7 @@
     "express-async-errors": "^3.1.1",
     "express-mung": "^0.5.1",
     "global": "^4.4.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "ioredis": "^4.16.3",
     "jsonwebtoken": "^8.5.1",
     "mime": "^2.4.5",
