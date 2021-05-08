@@ -37,7 +37,7 @@
     "reflect-metadata": "^0.1.13",
     "socket.io": "^2.3.0",
     "tsyringe": "^4.1.0",
-    "typeorm": "^0.2.24",
+    "typeorm": "^0.2.25",
     "uuidv4": "^6.0.7"
   },
   "husky": {
